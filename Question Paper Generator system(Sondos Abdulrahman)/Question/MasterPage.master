@@ -1,0 +1,219 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+      <link rel="stylesheet" href="style.css" type="text/css" /><style type="text/css">._css3m{display:none}</style>
+      <link href="css/bootstrap.css" rel="Stylesheet" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script src="Scripts/jquery-1.4.1.min.js" type="text/javascript"></script>
+    <style type="text/css">
+    .tabular
+    {
+    	-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+  
+
+    	}
+    	.ATMtabular
+    {
+    	-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+  background-image:url(images/ATM.jpg); 
+  height:300;
+
+    	}
+    	.intabular
+    {
+    
+   background-color:White;
+            margin-bottom: 0px;
+        }
+    .sidebar
+    {
+    	-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+  background-color:White;
+    }
+    </style>
+    <style type="text/css">
+        .tabular {
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+        }
+
+        .intabular {
+           
+            background-color: White;
+            margin-bottom: 0px;
+        }
+
+        .button {
+            height:45px;
+            width:140px;
+            border-color:#015987;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border: 1px solid #015987;
+            background-color:white;
+            font-size:16px;
+            font-weight:bold;
+            font-family: Calibri;
+        }
+
+            .button:hover {
+                box-shadow: 0 0 5px #015987;
+            }
+
+        .heading{
+            font-family:Bell MT;
+            font-size:28px;
+            color:#015987;
+        }
+
+        .lable{
+            font-family:Calibri;
+            font-size:19px;
+        }
+
+        .txt {
+            -webkit-transition: all 0.30s ease-in-out;
+            -moz-transition: all 0.30s ease-in-out;
+            -o-transition: all 0.30s ease-in-out;
+            font-size: 19px;
+            font-family: Calibri;
+        
+            border: 1px solid #DDDDDD;
+        }
+
+            .txt:focus {
+                box-shadow: 0 0 5px #015987;
+                padding: 8px 8px 8px 8px;
+                border: 1px solid #015987;
+            }
+        .style1
+        {
+            height: auto;
+        }
+    </style>
+    
+
+</head>
+<body style="background-color: #dddddd;">
+    
+    <form id="form1" runat="server">
+    
+    <div>
+    <center>
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+    <table class="tabular" width="80%">
+    
+    <tr>
+    <td colspan="2">
+        <img src="images/H.png" width="100%" class="intabular"/></td>
+    </tr>
+      <tr>
+        <td colspan="2" class="style1">
+            <asp:Panel ID="Panel1" runat="server" CssClass="navbar navbar-expand-lg navbar-dark bg-dark">
+          
+	<ul  class="navbar navbar-nav mr-auto">
+      <li class="topfirst nav-item" style="width:100px;" ><a href="ManageCourse.aspx"  class="nav-link" style="height:40px;line-height:15px;">Manage Course</a></li>
+      <li class="topfirst nav-item" style="width:100px;"><a href="ManageUser.aspx" class="nav-link" style="height:40px;line-height:15px;">Manage User</a></li>
+    
+      <li class="topfirst nav-item" style="width:100px;" ><a href="AddCourse.aspx"  class="nav-link" style="height:40px;line-height:15px;">Add Course</a></li>
+      <li class="topfirst nav-item" style="width:100px;"><a href="AddUser.aspx" class="nav-link" style="height:30px;line-height:15px;">Add User</a></li>
+    
+    <li class="topfirst nav-item" style="width:100px;"><a href="Create.aspx"  class="nav-link" style="height:60px;line-height:15px;">Create Question Paper</a></li>
+   <li class="topfirst nav-item" style="width:100px;"><a href="ShowQ.aspx" class="nav-link" style="height:40px;line-height:15px;">Show Question</a></li>
+	<li class="topLast nav-item" style="width:100px;"><a href="Logout.aspx" class="nav-link" style="height:30px; line-height:15px;">Logout</a></li>
+		
+		
+	</ul>
+     </asp:Panel>
+            <asp:Panel ID="Panel2" runat="server" CssClass="navbar navbar-expand-lg navbar-dark bg-dark">
+            <ul  class=" navbar navbar-nav mr-auto">
+    <li class="topfirst nav-item"><a href="Create.aspx" class="nav-link" style="height:15px;line-height:15px;">Create Question Paper</a></li>
+   <li class="topfirst nav-item"><a href="ShowQ.aspx" class="nav-link" style="height:15px;line-height:15px;">Show Question</a></li>
+     <li class="topfirst nav-item"><a href="AddQ.aspx"  class="nav-link" style="height:15px;line-height:15px;">Add Question</a></li> 
+     <li class="topfirst nav-item"><a href="MyCourse.aspx"  class="nav-link" style="height:15px;line-height:15px;">My Course</a></li>  
+    <li class="topLast nav-item"><a href="Logout.aspx"  class="nav-link" style="height:15px;line-height:15px;">Logout</a></li>
+           </ul>
+            </asp:Panel>
+	
+     <asp:Panel ID="Panel3" runat="server" style="margin-top: 0px" CssClass="navbar navbar-expand-lg navbar-dark bg-dark">
+            <ul  class="navbar navbar-nav mr-auto">
+    <li class=" nav-item"><a href="Login.aspx" class="nav-link" style="height:15px;line-height:15px;">Home</a></li>
+	<li class=" nav-item"><a href="Default.aspx" class="nav-link" style="height:15px;line-height:15px;">About Us</a></li>
+	<li class=" nav-item"><a href="Contact.aspx" class="nav-link" style="height:15px;line-height:15px;">Contact Us</a></li>
+    <li class=" nav-item"><a href="Login.aspx" class="nav-link" style="height:15px;line-height:15px;">Login</a></li>
+           </ul>
+            </asp:Panel>
+             
+        </td>
+    </tr>
+   <!-- <tr>
+    <td colspan="2" align="center" class="sidebar"><h2>
+        <asp:Label ID="Label1" runat="server" Text="Menu" Visible="False" 
+            Font-Size="X-Large" Font-Underline="True" ForeColor="Black"></asp:Label>
+        </h2>
+        <br />
+        <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/AddQ.aspx" 
+            Visible="False">Add Questions</asp:HyperLink>
+        <br />
+        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Login.aspx">Login</asp:HyperLink>
+        <br />
+        <asp:LinkButton ID="LinkButton1" runat="server" Visible="False">Generated Papers</asp:LinkButton>
+        <br />
+        <br />
+        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Create.aspx" 
+            Visible="False">Create Question Paper</asp:HyperLink>
+        <br />
+        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/ManageUser.aspx">ManageUser</asp:HyperLink>
+        <br />
+         <br />
+        <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/ManageCourse.aspx">ManageCourse</asp:HyperLink>
+        <br />
+        <br />
+        <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/ShowQ.aspx" 
+            Visible="False">Show Questions</asp:HyperLink>
+        <br />
+       
+        <br />
+        <asp:Button ID="Button1" runat="server" onclick="Button1_Click" Text="Logout" 
+            Visible="False" />
+    </td></tr>-->
+    <tr>
+    <td colspan="2" class="intabular"> <center><asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        </center>
+        </td>
+    </tr>
+    
+    <tr>
+    <td colspan="2">
+       
+        </td>
+        </tr>
+        
+        <tr>
+        <td colspan="2"></td>
+        </tr>
+    <tr>
+    <td colspan="2" style="background-color: #1a1a1a; color: #FFFFFF;" bgcolor="Aqua" 
+            align="right" class="intabular">
+        Exam Generator System &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+    </tr>
+        </table>
+    </center>
+    </div>
+    
+    </form>
+    
+</body>
+</html>
